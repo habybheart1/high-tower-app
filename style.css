@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+:root {
+  --primary-color: #2887ff;
+  --font-color: #519cf8;
+  --background-color: #f3f4f6;
+}
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  max-width: 100%;
+}
+/* SYLING THE NAVBAR */
+/* to hidden by default and vertically align*/
+.nav-bar-links {
+  display: none;
+}
+.mobile-screen-navBar {
+  display: none;
+}
+/* styling the mobile screen nav bar when active */
+.mobile-screen-navBar.active {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  text-align: center;
+}
+/* styling mobile screen ul */
+.mobile-screen-navBar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-screen-navBar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out;
+}
+.mobile-screen-navBar ul li a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+/* styling the button on mobile screen */
+.mobile-screen-navbar-btn {
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.mobile-screen-navbar-btn a {
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: white;
+  font-size: 1.2rem;
+  width: 40%;
+}
+.mobile-screen-navbar-btn a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transition: 0.1s all ease-in-out;
+  border: 1px solid white;
+}
+/* hide the button on small screen */
+.nav-bar-btn {
+  display: none;
+}
+/* styling for nav bar */
+.nav-bar {
+  background-color: var(--primary-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+/* styling hamburger */
+.nav-bar-toggle {
+  display: block;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* styling logo a */
+.nav-bar-logo a {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+}
+/* hover effect for a */
+.nav-bar-logo a:hover {
+  color: white;
+  transition: 0.1s all ease-in-out;
+  cursor: pointer;
+}
+/* styling the navbar parent  */
+.nav-bar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* styling when on large screen, it hides the hamburger */
+@media (min-width: 768px) {
+  /* show ul-links */
+  .nav-bar-links {
+    display: block;
+  }
+  /* display the link horizontally */
+  .nav-bar-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  /* style the ul anchor tag */
+  .nav-bar-links ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+  /* styling for anchor hover */
+  .nav-bar-links ul li a:hover {
+    color: var(--font-color);
+    transition: 0.1s all ease-in-out;
+    font-size: 1rem;
+  }
+  /* show the  */
+  .nav-bar-btn {
+    display: block;
+  }
+  /* syling for button */
+  .nav-bar-btn {
+    background-color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .nav-bar-btn a {
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-size: 1rem;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 600;
+  }
+  .nav-bar-btn a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.1s all ease-in-out;
+  }
+  .nav-bar {
+    background-color: white;
+  }
+  /* hide hamburger on wide screen */
+  .nav-bar-toggle {
+    display: none;
+  }
+  /* logo styling */
+  .nav-bar-logo a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  .nav-bar-logo a:hover {
+    color: var(--primary-color);
+    transition: 0.1s all ease-in-out;
+  }
+  /* parent container styling */
+  .nav-bar-flex {
+    padding: 40px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  /* hidden the mobile screen nav bar */
+  .mobile-screen-navBar.active {
+    display: none;
+  }
+}
+
+/* styles for hero section */
+/* parent container styling */
+.hero-container {
+  position: relative;
+  width: 100%;
+  display: block;
+  top: 70px;
+  background-image: url("photos/header-bg.jpg");
+  max-width: 90%;
+  margin: 0 auto;
+  background-size: cover;
+  border-radius: 40px;
+}
+.hero-content {
+  margin: 20px;
+  padding: 30px;
+  text-align: center;
+  display: block;
+}
+.hero-content p {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.hero-content h1 {
+  color: black;
+  font-size: 4.25rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.hero-content h1 span {
+  color: white;
+}
+.hero-content h1 .symbol {
+  color: var(--primary-color);
+}
+.hero-link a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+.hero-container .hero-image img {
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+  width: min(100%, 500px);
+}
+.hero-play {
+  margin-left: 20px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+}
+.hero-play:hover {
+  color: white;
+  background-color: var(--primary-color);
+  transition: 0.1s all ease-in-out;
+}
+@media (min-width: 768px) {
+  .hero-content p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .hero-content h1 {
+    font-size: 4.5rem;
+  }
+  .hero-link a {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+  }
+  .hero-container {
+    max-width: 98%;
+  }
+
+  .hero-container {
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+  }
+  .hero-content {
+    text-align: left;
+    width: 50%;
+    padding: 20px;
+  }
+  .hero-image {
+    width: 11000px;
+  }
+}
+
+/* Animation */
+/* Animation for hero image */
+.hero-image {
+  animation: slideInRight 0.8s ease-out 0s 1 normal;
+}
+/* slide in horizontally from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(30%);
+  }
+  /* 0% means end at the normal position */
+  to {
+    transform: translateX(0%);
+  }
+}
+/* Animation for hero-content paragraph*/
+
+.hero-content p {
+  /* initially hidden */
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeIn 0.4s ease-out 0.8s 1 normal forwards;
+  /* animate for 0.4s ones, timing-function:ease, delayed by 0.8s, iteration-count 1,  direction:back to the normal and  position, fill-mode:forwards */
+}
+/* fade in and slide up */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.hero-content h1 {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeIn 0.4s ease-out 1.2s 1 normal forwards;
+}
+.hero-link {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeIn 0.4s ease-out 1.6s 1 normal forwards;
+}
