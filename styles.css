@@ -377,7 +377,8 @@
   position: relative;
   overflow: hidden;
 }
-.booking-bg span {
+.booking-bg span,
+.booking-bg i {
   color: var(--primary-color);
   font-size: 1.8rem;
 }
@@ -400,7 +401,8 @@
   opacity: 1;
   pointer-events: auto;
 }
-.booking-content span {
+.booking-content span,
+.booking-content i {
   color: white;
   font-size: 1.3rem;
   padding: 8px;
@@ -410,7 +412,7 @@
 }
 .booking-content h4 {
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .booking-content p {
   font-size: 0.6rem;
