@@ -1,4 +1,4 @@
-/* === RESET === */
+/* RESET  */
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +11,11 @@
   --primary-color: #2887ff;
   --font-color: #519cf8;
   --background-color: #f3f4f6;
-
   --section-padding: 4rem 1rem;
   --section-spacing: 6rem;
 }
 
-/* === CONTAINER === */
+/* CONTAINER */
 .container {
   width: 100%;
   margin: 0;
@@ -24,7 +23,7 @@
   max-width: 100%;
 }
 
-/* === NAVBAR === */
+/* NAVBAR */
 .nav-bar {
   background-color: var(--primary-color);
   width: 100%;
@@ -32,12 +31,14 @@
   top: 0;
   z-index: 1000;
 }
+/* nav bar container */
 .nav-bar-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
+/* logo link */
 .nav-bar-logo a {
   color: white;
   font-weight: 600;
@@ -49,12 +50,15 @@
   transition: 0.1s all ease-in-out;
   cursor: pointer;
 }
+/* nav bar ul>li links */
 .nav-bar-links {
   display: none;
 }
+/* link-like-button  */
 .nav-bar-btn {
   display: none;
 }
+/* nav bar hamburger */
 .nav-bar-toggle {
   display: block;
   color: white;
@@ -66,6 +70,7 @@
 .mobile-screen-navBar {
   display: none;
 }
+/* activated by javascript */
 .mobile-screen-navBar.active {
   display: flex;
   flex-direction: column;
@@ -78,6 +83,7 @@
   left: 0;
   text-align: center;
 }
+/* style ul */
 .mobile-screen-navBar ul {
   list-style: none;
   display: flex;
@@ -90,9 +96,11 @@
   font-size: 18px;
   transition: transform 0.1s ease-in-out;
 }
+/* hover increase in size */
 .mobile-screen-navBar ul li a:hover {
   transform: scale(1.1);
 }
+/* style link like button */
 .mobile-screen-navbar-btn a {
   text-decoration: none;
   color: var(--primary-color);
@@ -110,6 +118,7 @@
 
 /* Large screen navbar */
 @media (min-width: 768px) {
+  /* display desktop screen ul */
   .nav-bar-links {
     display: block;
   }
@@ -118,18 +127,19 @@
     display: flex;
     gap: 30px;
   }
+  /* display desktop ul li link */
   .nav-bar-links ul li a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.8rem;
-    text-transform: capitalize;
   }
   .nav-bar-links ul li a:hover {
     color: var(--font-color);
-    font-size: 1rem;
+    transform: scale(1.1);
     transition: 0.1s all ease-in-out;
   }
+  /* styled link like button */
   .nav-bar-btn {
     display: block;
     background-color: white;
@@ -161,6 +171,7 @@
     color: var(--primary-color);
     font-size: 1.5rem;
   }
+  /* styled container */
   .nav-bar-flex {
     padding: 40px;
     margin: 0 auto;
@@ -171,7 +182,7 @@
   }
 }
 
-/* === HERO SECTION === */
+/* HERO SECTION  */
 .hero-container {
   margin-top: 80px; /* space for fixed navbar */
   width: 100%;
@@ -180,6 +191,7 @@
   background-size: cover;
   border-radius: 40px;
 }
+/* wraps the content except image */
 .hero-content {
   margin: 20px;
   padding: 30px;
@@ -203,6 +215,7 @@
 .hero-content h1 .symbol {
   color: var(--primary-color);
 }
+/* hero link like btn */
 .hero-link {
   display: inline-flex;
   align-items: center;
@@ -215,6 +228,7 @@
   padding: 15px 30px;
   border-radius: 25px;
 }
+/* play icon */
 .hero-play {
   color: var(--primary-color);
   font-size: 1.5rem;
@@ -228,13 +242,14 @@
   background-color: var(--primary-color);
   transition: 0.1s ease-in-out;
 }
+/* hero image  */
 .hero-container .hero-image img {
   margin-top: 20px;
   display: block;
   width: min(100%, 500px);
 }
 
-/* Large hero adjustments */
+/* Large hero adjustments- desktop screen */
 @media (min-width: 768px) {
   .hero-container {
     display: flex;
@@ -273,6 +288,7 @@
     transform: translateX(0);
   }
 }
+/* animation for hero content */
 .hero-content p,
 .hero-content h1,
 .hero-link {
@@ -309,6 +325,11 @@
   margin-inline: auto;
   text-align: center;
 }
+.destination h3 {
+  font-weight: 800;
+  margin-bottom: 0;
+}
+/* grid container */
 .destination-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -387,6 +408,7 @@
   font-weight: 600;
   color: black;
 }
+/* container to display when hover */
 .booking-content {
   position: absolute;
   inset: 0; /* fill parent */
@@ -481,8 +503,6 @@
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  /* max-width: 350px;
-  margin: 0 auto; */
 }
 .card-year,
 .clients,
@@ -569,7 +589,7 @@
   padding: var(--section-padding);
 }
 .testimonials-head {
-  padding: 2rem;
+  padding: 0 2rem;
 }
 .testimonials-head h3 {
   font-weight: 700;
