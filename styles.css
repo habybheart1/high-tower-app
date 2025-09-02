@@ -269,10 +269,10 @@
     font-size: 3.9rem;
   }
   .hero-image img {
-    transform: scale(2.5);
+    transform: scale(2);
     position: relative;
     top: 3rem;
-    left: 15rem;
+    left: 10rem;
   }
 }
 
@@ -735,7 +735,19 @@
 }
 @media (min-width: 768px) {
   .footer {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 1rem;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    margin: 15px;
+  }
+  .footer-flex {
+    padding: 10px;
+    flex: 1 1 200px;
+    max-width: 250px;
   }
 }
